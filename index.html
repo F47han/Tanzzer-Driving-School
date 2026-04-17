@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tanveer Driving School | Edinburgh's Top Rated Instructor</title>
+    <title>Tanvir Driving School | Professional Edinburgh Driving Lessons</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
@@ -35,78 +35,81 @@
 
         /* Hero Section */
         .hero {
-            padding: 200px 5% 120px;
+            padding: 220px 5% 140px;
             background: linear-gradient(135deg, rgba(240, 244, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 100%),
                         url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&q=80&w=2000');
             background-size: cover; background-position: center; text-align: center;
         }
-        .hero h1 { font-size: clamp(2.2rem, 6vw, 4rem); margin-bottom: 1.5rem; color: var(--dark); line-height: 1.1; letter-spacing: -1px; }
-        .hero p { font-size: 1.3rem; max-width: 800px; margin: 0 auto 2.5rem; color: var(--text-gray); }
-        .special-badge { background: var(--accent); color: #000; padding: 12px 28px; border-radius: 50px; font-weight: 800; display: inline-block; margin-bottom: 25px; animation: pulse 2s infinite; box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4); }
+        .hero h1 { font-size: clamp(2.5rem, 6vw, 4.2rem); margin-bottom: 1.5rem; color: var(--dark); line-height: 1.1; letter-spacing: -1px; }
+        .hero p { font-size: 1.4rem; max-width: 850px; margin: 0 auto 2.5rem; color: var(--text-gray); }
+        .special-badge { background: var(--accent); color: #000; padding: 12px 28px; border-radius: 50px; font-weight: 800; display: inline-block; margin-bottom: 25px; animation: pulse 2s infinite; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-        /* General Layout */
-        .section { padding: 100px 5%; }
+        /* Content Sections */
+        .section { padding: 120px 5%; }
         .container { max-width: 1200px; margin: auto; }
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.8rem; color: var(--dark); margin-bottom: 15px; }
+        .section-header { text-align: center; margin-bottom: 80px; }
+        .section-header h2 { font-size: 3rem; color: var(--dark); margin-bottom: 20px; }
+        .section-header p { font-size: 1.2rem; color: var(--text-gray); max-width: 700px; margin: auto; }
 
-        /* Feature Grid (Why Choose Us) */
-        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
-        .f-card { padding: 40px; border-radius: 24px; background: var(--light-bg); transition: 0.4s; border: 1px solid transparent; }
-        .f-card:hover { transform: translateY(-10px); background: white; border-color: var(--secondary); box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .f-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+        /* Feature Grid (Expanded Content) */
+        .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; }
+        .f-card { padding: 50px; border-radius: 30px; background: var(--light-bg); transition: 0.4s; border: 1px solid #eef2f6; }
+        .f-card:hover { transform: translateY(-12px); background: white; border-color: var(--secondary); box-shadow: 0 25px 50px rgba(0,0,0,0.06); }
+        .f-icon { font-size: 3.5rem; margin-bottom: 25px; display: block; }
+        .f-card h3 { font-size: 1.6rem; margin-bottom: 15px; color: var(--dark); }
+        .f-card p { font-size: 1.05rem; color: var(--text-gray); }
 
-        /* About & Map Split */
-        .split-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 60px; align-items: start; }
-        .about-content { background: white; padding: 50px; border-radius: 30px; box-shadow: 0 10px 40px rgba(0,0,0,0.02); }
-        .map-wrapper { height: 550px; border-radius: 30px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.12); position: sticky; top: 120px; }
+        /* Split Section: About & Map */
+        .split-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 70px; align-items: start; }
+        .about-content { background: white; padding: 60px; border-radius: 40px; box-shadow: 0 10px 40px rgba(0,0,0,0.03); }
+        .map-wrapper { height: 600px; border-radius: 40px; overflow: hidden; box-shadow: 0 25px 60px rgba(0,0,0,0.15); position: sticky; top: 120px; border: 8px solid white; }
 
-        /* Pricing */
-        .p-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
-        .p-card { background: white; padding: 50px 40px; border-radius: 28px; border: 1px solid #e2e8f0; transition: 0.4s; text-align: center; position: relative; }
-        .p-card.featured { border: 3px solid var(--primary); transform: scale(1.05); z-index: 2; }
-        .popular-tag { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--primary); color: white; padding: 6px 20px; border-radius: 50px; font-weight: 700; font-size: 0.8rem; }
-        .p-price { font-size: 3.5rem; font-weight: 800; color: var(--primary); margin: 20px 0; }
-        .p-list { list-style: none; text-align: left; margin: 30px 0; }
-        .p-list li { padding: 10px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 12px; }
+        /* Pricing Expanded */
+        .p-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; margin-top: 40px; }
+        .p-card { background: white; padding: 60px 40px; border-radius: 35px; border: 1px solid #e2e8f0; text-align: center; transition: 0.4s; }
+        .p-card.featured { border: 4px solid var(--primary); transform: scale(1.05); box-shadow: 0 30px 60px rgba(0,48,135,0.1); }
+        .p-price { font-size: 4rem; font-weight: 800; color: var(--primary); margin: 25px 0; }
+        .p-list { list-style: none; text-align: left; margin: 35px 0; }
+        .p-list li { padding: 12px 0; border-bottom: 1px solid #f1f5f9; display: flex; align-items: center; gap: 12px; font-weight: 500; }
 
-        /* Inquiry Form */
-        .form-section { background: var(--dark); color: white; padding: 100px 5%; }
-        .form-container { max-width: 800px; margin: auto; background: white; color: var(--dark); padding: 50px; border-radius: 30px; }
-        .input-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
-        .input-group label { font-weight: 700; font-size: 0.9rem; }
-        .input-group input, .input-group select, .input-group textarea { padding: 14px; border: 1px solid #cbd5e1; border-radius: 12px; font-family: inherit; font-size: 1rem; }
+        /* Form Design */
+        .form-section { background: var(--dark); color: white; padding: 120px 5%; }
+        .form-container { max-width: 850px; margin: auto; background: white; color: var(--dark); padding: 60px; border-radius: 40px; }
+        .input-group { margin-bottom: 25px; display: flex; flex-direction: column; gap: 10px; }
+        .input-group label { font-weight: 700; font-size: 1rem; color: var(--primary); }
+        .input-group input, .input-group select, .input-group textarea { padding: 16px; border: 2px solid #e2e8f0; border-radius: 15px; font-family: inherit; font-size: 1.1rem; transition: 0.3s; }
+        .input-group input:focus { border-color: var(--primary); outline: none; }
 
         /* Buttons */
-        .btn { padding: 18px 38px; border-radius: 14px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; border: none; font-family: inherit; }
+        .btn { padding: 20px 40px; border-radius: 16px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-flex; align-items: center; gap: 12px; cursor: pointer; border: none; font-size: 1.1rem; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-wa { background: var(--success); color: white; }
-        .btn:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        .btn:hover { transform: translateY(-4px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
 
-        @media (max-width: 1024px) { .split-grid { grid-template-columns: 1fr; } .p-card.featured { transform: scale(1); } }
+        @media (max-width: 1024px) { .split-grid { grid-template-columns: 1fr; } .p-card.featured { transform: scale(1); } .hero { padding-top: 180px; } }
         @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.04); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body>
 
 <nav>
-    <div class="logo">TANVEER <span style="font-weight:400">DRIVING SCHOOL</span></div>
+    <div class="logo">TANVIR <span style="font-weight:400">DRIVING SCHOOL</span></div>
     <button class="lang-btn" onclick="toggleLang()" id="langBtn">বাংলা (Bengali)</button>
 </nav>
 
 <header class="hero">
     <div class="container">
-        <div class="special-badge" data-aos="zoom-in">🎁 SPECIAL: FREE 30 Mins with your first 90 Min Booking!</div>
-        <h1 id="hTitle" data-aos="fade-up">Learn to Drive with Confidence in Edinburgh</h1>
-        <p id="hSub" data-aos="fade-up" data-aos-delay="100">My name is Tanveer, and I provide patient, professional driving lessons tailored to help you pass the first time. Proudly serving all EH postcodes with Manual and Automatic vehicles.</p>
+        <div class="special-badge" data-aos="zoom-in">🎁 EXCLUSIVE: FREE 30 Mins with your first 90 Min Booking!</div>
+        <h1 id="hTitle" data-aos="fade-up">Master the Roads with Tanvir Driving School Edinburgh</h1>
+        <p id="hSub" data-aos="fade-up" data-aos-delay="100">My name is Tanvir. I provide top-tier, professional driving instruction across the entirety of Edinburgh. Whether you are starting from zero or just need a final polish before your test, I am here to ensure you drive with safety and absolute confidence.</p>
         <div class="hero-btns" data-aos="fade-up" data-aos-delay="200">
             <a href="https://wa.me/447568162501" class="btn btn-wa">Message on WhatsApp</a>
-            <a href="tel:07568162501" class="btn btn-primary" style="margin-left:15px;">Call 07568162501</a>
+            <a href="tel:07568162501" class="btn btn-primary" style="margin-left:15px;">Call Tanvir Today</a>
         </div>
-        <div style="margin-top: 50px; display: flex; justify-content: center; gap: 40px; font-weight: 700; color: var(--primary);" data-aos="fade-up">
-            <span>⭐ Top Rated</span>
-            <span>🛡️ DVSA Approved</span>
-            <span>📍 Full Edinburgh Coverage</span>
+        <div style="margin-top: 60px; display: flex; justify-content: center; gap: 50px; font-weight: 700; color: var(--primary);" data-aos="fade-up">
+            <span>✅ DVSA Approved</span>
+            <span>⭐ High Pass Success</span>
+            <span>📍 Serving All EH Postcodes</span>
         </div>
     </div>
 </header>
@@ -114,39 +117,29 @@
 <section class="section">
     <div class="container">
         <div class="section-header">
-            <h2>Why Choose Tanveer?</h2>
-            <p>I focus on safety, confidence, and a calm learning environment.</p>
+            <h2>The Tanvir Driving School Advantage</h2>
+            <p>Driving is a life skill. I don't just teach you how to pass; I teach you how to be a safe, observant, and responsible driver for life.</p>
         </div>
         <div class="feature-grid">
             <div class="f-card" data-aos="fade-up">
-                <span class="f-icon">😊</span>
-                <h3>Patient & Friendly</h3>
-                <p>I specialize in nervous students, ensuring a stress-free atmosphere in every lesson.</p>
+                <span class="f-icon">🛡️</span>
+                <h3>Calm & Supportive Coaching</h3>
+                <p>I understand that the road can be intimidating. While I don't label myself a "specialist," I have successfully guided hundreds of anxious and nervous students to license success through a patient, non-judgmental teaching style.</p>
             </div>
             <div class="f-card" data-aos="fade-up" data-aos-delay="100">
-                <span class="f-icon">📊</span>
-                <h3>High Pass Rate</h3>
-                <p>My students have a proven track record of passing their driving test on the very first attempt.</p>
+                <span class="f-icon">🗺️</span>
+                <h3>Deep Local Road Knowledge</h3>
+                <p>Although there are no "official" test routes, I have an expert-level understanding of Edinburgh's most complex junctions, bypasses, and residential areas. You will practice on the roads that truly matter for your development.</p>
             </div>
             <div class="f-card" data-aos="fade-up" data-aos-delay="200">
-                <span class="f-icon">🕒</span>
-                <h3>Flexible Scheduling</h3>
-                <p>Morning, afternoon, or evening—I work around your busy lifestyle and commitments.</p>
+                <span class="f-icon">💎</span>
+                <h3>Premium Modern Fleet</h3>
+                <p>Learn in comfort. Our vehicles are late-model, regularly serviced, and equipped with dual controls for your absolute safety. We offer both Manual and Automatic lessons to suit your specific driving goals.</p>
             </div>
             <div class="f-card" data-aos="fade-up" data-aos-delay="300">
-                <span class="f-icon">🚗</span>
-                <h3>Manual & Auto</h3>
-                <p>Choose the car that suits you best with our modern, easy-to-drive fleet.</p>
-            </div>
-            <div class="f-card" data-aos="fade-up" data-aos-delay="400">
-                <span class="f-icon">⚡</span>
-                <h3>Intensive Courses</h3>
-                <p>Need your license fast? Ask about our intensive fast-track learning programs.</p>
-            </div>
-            <div class="f-card" data-aos="fade-up" data-aos-delay="500">
-                <span class="f-icon">📍</span>
-                <h3>Local Expertise</h3>
-                <p>I know every junction and test route in Edinburgh, giving you the ultimate advantage.</p>
+                <span class="f-icon">📈</span>
+                <h3>Progressive Learning Plans</h3>
+                <p>No two students are the same. I create a customized syllabus for you, tracking your progress through every maneuver and traffic scenario so you know exactly when you are ready for the big day.</p>
             </div>
         </div>
     </div>
@@ -156,17 +149,17 @@
     <div class="container">
         <div class="split-grid">
             <div class="about-content" data-aos="fade-right">
-                <h2 id="aTitle" style="font-size: 2.5rem; margin-bottom: 25px; color: var(--primary);">Meet Tanveer</h2>
+                <h2 id="aTitle" style="font-size: 3rem; margin-bottom: 30px; color: var(--primary);">Get to Know Tanvir</h2>
                 <div id="aText">
-                    <p>I am a fully qualified <strong>DVSA-approved driving instructor</strong> based in Edinburgh. With years of experience teaching learners of all abilities, I stay current with the latest training methods to ensure the highest standard of instruction.</p>
+                    <p>I am a fully qualified <strong>DVSA-Approved Driving Instructor (ADI)</strong> operating in the heart of Edinburgh. My teaching philosophy is built on the pillars of safety, patience, and clear communication.</p>
                     <br>
-                    <p>I provide a relaxed, friendly, and patient learning environment. I believe learning to drive should be an enjoyable experience, not something overwhelming. Bringing my <strong>Bengali heritage</strong> to my work, I offer a heartfelt, human approach. I am proud to serve the community and can offer instruction in <strong>Bengali</strong> for students who feel more comfortable in their native tongue.</p>
+                    <p>I stay at the forefront of the industry by keeping my training methods updated with the latest DVSA standards. My background and <strong>Bengali heritage</strong> allow me to connect with a diverse range of students, and I am proud to offer instruction in <strong>Bengali</strong> for those who feel it aids their learning process.</p>
                     <br>
-                    <p>Whether you are a complete beginner or looking for refresher lessons, I am dedicated to helping you become a safe, confident driver for life.</p>
+                    <p>I have a reputation for being reliable and punctual. I understand that your time is valuable, which is why every lesson is structured to maximize learning and build your confidence behind the wheel. From the first turn of the key to the final emergency stop, I am with you every step of the way.</p>
                 </div>
             </div>
             <div class="map-wrapper" data-aos="fade-left">
-                <iframe src="https://maps.google.com/maps/contrib/100806292063130154402" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m1!2sEdinburgh!5e0!3m2!1sen!2suk!4v1713380000000!5m2!1sen!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </div>
@@ -175,49 +168,44 @@
 <section class="section">
     <div class="container">
         <div class="section-header">
-            <h2>Lesson Pricing & Packages</h2>
-            <p>Invest in a skill that lasts a lifetime. No hidden fees.</p>
+            <h2>Detailed Lesson Packages</h2>
+            <p>Transparent, competitive pricing for a premium learning experience in Edinburgh. Choose the block that fits your budget.</p>
         </div>
         <div class="p-grid">
             <div class="p-card" data-aos="fade-up">
                 <h3>Manual Lessons</h3>
                 <div class="p-price">£45<small>/hr</small></div>
                 <ul class="p-list">
-                    <li>✅ Mon–Fri (7am – 5pm)</li>
+                    <li>✅ Standard Hourly Rate</li>
                     <li>✅ 10 Hour Block: <strong>£440</strong></li>
                     <li>✅ 20 Hour Block: <strong>£870</strong></li>
-                    <li>✅ Modern Manual Car</li>
+                    <li>✅ Mon-Fri Standard Hours</li>
                 </ul>
-                <a href="tel:07568162501" class="btn btn-primary" style="width:100%; justify-content:center;">Book Manual</a>
             </div>
-
             <div class="p-card featured" data-aos="fade-up" data-aos-delay="100">
-                <div class="popular-tag">MOST POPULAR</div>
+                <div style="background: var(--primary); color: white; padding: 5px 15px; border-radius: 5px; font-weight: 700; font-size: 0.8rem; margin-bottom: 10px; display: inline-block;">RECOMMENDED</div>
                 <h3>Automatic Lessons</h3>
                 <div class="p-price">£50<small>/hr</small></div>
                 <ul class="p-list">
-                    <li>✅ Easier learning curve</li>
                     <li>✅ 10 Hour Block: <strong>£490</strong></li>
                     <li>✅ 20 Hour Block: <strong>£970</strong></li>
-                    <li>✅ Modern Automatic Car</li>
+                    <li>✅ Modern Automatic Vehicle</li>
+                    <li>✅ Easier learning curve</li>
                 </ul>
-                <a href="https://wa.me/447568162501" class="btn btn-primary" style="width:100%; justify-content:center;">Book Automatic</a>
             </div>
-
             <div class="p-card" data-aos="fade-up" data-aos-delay="200">
                 <h3>Student Discount</h3>
                 <div class="p-price">£42<small>/hr</small></div>
                 <ul class="p-list">
                     <li>✅ 10 Hour Block: <strong>£420</strong></li>
+                    <li>✅ Manual Transmission Only</li>
                     <li>✅ Valid Student ID Required</li>
-                    <li>✅ Saturday Rate: £50/hr</li>
-                    <li>❌ Sundays: Closed</li>
+                    <li>✅ Perfect for Uni Students</li>
                 </ul>
-                <a href="https://wa.me/447568162501" class="btn btn-primary" style="width:100%; justify-content:center;">Get Student Rate</a>
             </div>
         </div>
-        <div style="margin-top: 40px; padding: 25px; background: #fff4e5; border-radius: 20px; border: 1px solid #ffd1b3; text-align: center;">
-            <p><strong>Offer Terms:</strong> The "Free 30 Mins" special is only valid for your first 90-minute lesson and cannot be used alongside block booking discounts or student deals.</p>
+        <div style="margin-top: 60px; text-align: center; font-weight: 600; color: var(--text-gray);">
+            <p>Saturdays: £50/hr (Subject to availability) | Sundays: Closed</p>
         </div>
     </div>
 </section>
@@ -225,48 +213,49 @@
 <section class="form-section">
     <div class="container">
         <div class="form-container" data-aos="fade-up">
-            <h2 style="text-align: center; margin-bottom: 40px;">Request a Lesson</h2>
-            <form action="#">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <h2 style="text-align: center; margin-bottom: 20px;">Secure Your Slot</h2>
+            <p style="text-align: center; margin-bottom: 40px; color: var(--text-gray);">Slots fill up fast. Send your details below and Tanvir will contact you to arrange your first lesson.</p>
+            <form>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
                     <div class="input-group">
-                        <label>Full Name</label>
-                        <input type="text" placeholder="Enter your name" required>
+                        <label>First & Last Name</label>
+                        <input type="text" placeholder="Your Name" required>
                     </div>
                     <div class="input-group">
-                        <label>Phone Number</label>
+                        <label>Primary Phone Number</label>
                         <input type="tel" placeholder="07XXX XXXXXX" required>
                     </div>
                 </div>
                 <div class="input-group">
-                    <label>Lesson Type</label>
+                    <label>Preferred Transmission</label>
                     <select required>
-                        <option value="">Select Lesson Type...</option>
-                        <option value="manual">Manual Lessons</option>
-                        <option value="automatic">Automatic Lessons</option>
-                        <option value="intensive">Intensive Course</option>
-                        <option value="student">Student Discount Package</option>
+                        <option value="manual">Manual Transmission</option>
+                        <option value="automatic">Automatic Transmission</option>
+                        <option value="undecided">Not Sure Yet</option>
                     </select>
                 </div>
                 <div class="input-group">
-                    <label>Your Message & Availability</label>
-                    <textarea rows="4" placeholder="Tell Tanveer about your experience and when you are free..."></textarea>
+                    <label>Tell me about your driving history (Beginner, some hours, or test-ready?)</label>
+                    <textarea rows="5" placeholder="Share any specific goals or previous experience..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit Inquiry</button>
+                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Submit Lesson Inquiry</button>
             </form>
         </div>
     </div>
 </section>
 
-<footer style="background: var(--dark); color: white; padding: 60px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
-    <p style="font-size: 1.2rem; font-weight: 700;">Tanveer Driving School - Edinburgh</p>
-    <p style="opacity: 0.7; margin: 15px 0;">Helping you drive with confidence across all of Edinburgh and surrounding areas.</p>
-    <p>© 2026. All Rights Reserved.</p>
+<footer style="background: var(--dark); color: white; padding: 80px 5%; text-align: center; border-top: 1px solid rgba(255,255,255,0.1);">
+    <h3 style="font-size: 1.8rem; margin-bottom: 20px; color: white;">Tanvir Driving School</h3>
+    <p style="opacity: 0.7; max-width: 600px; margin: 0 auto 30px;">Empowering drivers across Edinburgh with professional, patient, and reliable instruction since day one.</p>
+    <div style="display: flex; justify-content: center; gap: 20px; margin-bottom: 30px;">
+        <a href="#" style="color: white; text-decoration: none;">Facebook</a> | <a href="#" style="color: white; text-decoration: none;">Instagram</a>
+    </div>
+    <p>© 2026 Tanvir Driving School. All Rights Reserved.</p>
 </footer>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    AOS.init({ duration: 900, once: true });
-
+    AOS.init({ duration: 1000, once: true });
     let isEng = true;
     function toggleLang() {
         const hTitle = document.getElementById('hTitle');
@@ -276,17 +265,17 @@
         const btn = document.getElementById('langBtn');
 
         if(isEng) {
-            hTitle.innerText = "এডিনবার্গে আত্মবিশ্বাসের সাথে গাড়ি চালানো শিখুন";
-            hSub.innerText = "আমার নাম তানভীর। আমি আপনাকে ধৈর্য এবং পেশাদারিত্বের সাথে গাড়ি চালানো শেখাবো যাতে আপনি প্রথমবারই পরীক্ষায় উত্তীর্ণ হতে পারেন।";
-            aTitle.innerText = "তানভীর সম্পর্কে জানুন";
-            aText.innerHTML = "<p>আমি এডিনবার্গে একজন ডিভিএসএ-অনুমোদিত ড্রাইভিং ইন্সট্রাক্টর। আমি বাংলা ও ইংরেজি উভয় ভাষায় প্রশিক্ষণ দিয়ে থাকি। আমার লক্ষ্য হলো আপনাকে একজন নিরাপদ এবং আত্মবিশ্বাসী চালক হিসেবে গড়ে তোলা।</p><br><p>আপনি যদি প্রথমবার গাড়ি চালানো শিখছেন বা আপনার যদি রিফ্রেশার কোর্সের প্রয়োজন হয়, আমি আপনাকে সাহায্য করতে প্রস্তুত।</p>";
+            hTitle.innerText = "তানভীর ড্রাইভিং স্কুল এডিনবার্গের সাথে ড্রাইভ মাস্টার করুন";
+            hSub.innerText = "আমার নাম তানভীর। আমি এডিনবার্গে পেশাদার ড্রাইভিং প্রশিক্ষণ প্রদান করি। আপনি নতুন হোন বা পরীক্ষার জন্য প্রস্তুতির প্রয়োজন হোক, আমি আপনার সাথে আছি।";
+            aTitle.innerText = "তানভীর সম্পর্কে বিস্তারিত";
+            aText.innerHTML = "<p>আমি এডিনবার্গে একজন ডিভিএসএ-অনুমোদিত ড্রাইভিং ইন্সট্রাক্টর। আমার শিক্ষাদানের মূল ভিত্তি হলো নিরাপত্তা এবং ধৈর্য।</p><br><p>আমি বাংলা ও ইংরেজি উভয় ভাষায় প্রশিক্ষণ দিই। আমি অনেক নার্ভাস শিক্ষার্থীকে আত্মবিশ্বাসী করে তুলেছি। আপনি যদি নিজের ভাষায় শিখতে চান, আমি আপনাকে সাহায্য করতে পারি।</p>";
             btn.innerText = "Switch to English";
             isEng = false;
         } else {
-            hTitle.innerText = "Learn to Drive with Confidence in Edinburgh";
-            hSub.innerText = "My name is Tanveer, and I provide patient, professional driving lessons tailored to help you pass the first time.";
-            aTitle.innerText = "Meet Tanveer";
-            aText.innerHTML = "<p>I am a fully qualified DVSA-approved driving instructor based in Edinburgh...</p>";
+            hTitle.innerText = "Master the Roads with Tanvir Driving School Edinburgh";
+            hSub.innerText = "My name is Tanvir. I provide top-tier, professional driving instruction across the entirety of Edinburgh...";
+            aTitle.innerText = "Get to Know Tanvir";
+            aText.innerHTML = "<p>I am a fully qualified DVSA-Approved Driving Instructor (ADI) operating in the heart of Edinburgh...</p>";
             btn.innerText = "বাংলা (Bengali)";
             isEng = true;
         }
