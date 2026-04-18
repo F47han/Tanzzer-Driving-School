@@ -165,7 +165,7 @@
             </div>
         </div>
         <div class="map-full" data-aos="zoom-in">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1m1!2sEdinburgh!5e0!3m2!1sen!2suk!4v1713400000000!5m2!1sen!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d142940.4578160455!2d-3.32353086438096!3d55.94121289139265!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48779035a4d0699f%3A0x6331908d132c3f91!2sEdinburgh!5e0!3m2!1sen!2suk!4v1713470000000!5m2!1sen!2suk" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
@@ -227,20 +227,29 @@
     <div class="container">
         <div class="form-container" data-aos="fade-up">
             <h2 style="text-align: center; margin-bottom: 30px;">Request a Lesson</h2>
-            <form>
+            <form id="drivingForm">
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                    <div class="input-group"><label>Name</label><input type="text" placeholder="Full Name" required></div>
-                    <div class="input-group"><label>Phone</label><input type="tel" placeholder="07XXX XXXXXX" required></div>
+                    <div class="input-group">
+                        <label>Name</label>
+                        <input type="text" id="custName" placeholder="Full Name" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="tel" id="custPhone" placeholder="07XXX XXXXXX" required>
+                    </div>
                 </div>
                 <div class="input-group">
                     <label>Transmission</label>
-                    <select><option>Manual</option><option>Automatic</option></select>
+                    <select id="custType">
+                        <option value="Manual">Manual</option>
+                        <option value="Automatic">Automatic</option>
+                    </select>
                 </div>
                 <div class="input-group">
                     <label>Message</label>
-                    <textarea rows="4" placeholder="Tell Tanvir about your previous experience..."></textarea>
+                    <textarea id="custMsg" rows="4" placeholder="Tell Tanvir about your previous experience..."></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Send Inquiry</button>
+                <button type="button" onclick="sendToWhatsApp()" class="btn btn-primary" style="width:100%; justify-content:center;">Send via WhatsApp</button>
             </form>
         </div>
     </div>
@@ -254,6 +263,29 @@
 <script>
     AOS.init({ duration: 1000, once: true });
     let isEng = true;
+
+    function sendToWhatsApp() {
+        const name = document.getElementById('custName').value;
+        const phone = document.getElementById('custPhone').value;
+        const type = document.getElementById('custType').value;
+        const msg = document.getElementById('custMsg').value;
+
+        if(!name || !phone) {
+            alert("Please fill in your name and phone number.");
+            return;
+        }
+
+        const whatsappUrl = `https://wa.me/447568162501?text=` 
+            + `New Lesson Inquiry%0a`
+            + `--------------------%0a`
+            + `Name: ${encodeURIComponent(name)}%0a`
+            + `Phone: ${encodeURIComponent(phone)}%0a`
+            + `Type: ${encodeURIComponent(type)}%0a`
+            + `Message: ${encodeURIComponent(msg)}`;
+
+        window.open(whatsappUrl, '_blank');
+    }
+
     function toggleLang() {
         const hTitle = document.getElementById('hTitle');
         const hSub = document.getElementById('hSub');
