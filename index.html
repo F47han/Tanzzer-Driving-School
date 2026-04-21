@@ -24,7 +24,6 @@
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body { font-family: 'Plus Jakarta Sans', sans-serif; color: #334155; line-height: 1.8; background: var(--white); overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* Navigation */
         nav {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(12px);
@@ -37,7 +36,6 @@
         .social-link:hover { color: var(--secondary); transform: scale(1.1); }
         .lang-btn { background: var(--accent); color: #000; border: none; padding: 10px 22px; border-radius: 50px; font-weight: 800; cursor: pointer; transition: 0.3s; }
 
-        /* Hero */
         .hero {
             padding: 200px 5% 100px;
             background: linear-gradient(135deg, rgba(240, 244, 255, 0.96) 0%, rgba(255, 255, 255, 0.92) 100%),
@@ -45,15 +43,12 @@
             background-size: cover; background-position: center; text-align: center;
         }
         .hero h1 { font-size: clamp(2.2rem, 6vw, 4.2rem); margin-bottom: 1.5rem; color: var(--dark); line-height: 1.1; }
-        .hero p { font-size: 1.2rem; max-width: 800px; margin: 0 auto; color: var(--text-gray); }
 
-        /* Common Section Styles */
         .section { padding: 80px 5%; }
         .container { max-width: 1200px; margin: auto; }
         .section-header { text-align: center; margin-bottom: 50px; }
         .section-header h2 { font-size: 2.5rem; color: var(--dark); margin-bottom: 15px; }
 
-        /* Wall of Fame Gallery */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -69,35 +64,31 @@
             transition: 0.3s;
         }
         .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .gallery-item:hover img { transform: scale(1.1); }
 
-        /* Advantage 2x2 Grid */
         .advantage-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 30px; }
         .f-card { padding: 40px; border-radius: 30px; background: var(--light-bg); border: 1px solid #eef2f6; transition: 0.4s; }
         .f-card:hover { transform: translateY(-10px); background: white; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
         .f-icon { font-size: 2.5rem; margin-bottom: 15px; display: block; }
-        .f-card h3 { color: var(--primary); margin-bottom: 15px; }
 
-        /* Instructor & About Split - FIX APPLIED HERE */
+        /* Updated Testimonials Grid */
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; }
+        .t-card { background: white; padding: 30px; border-radius: 24px; border: 1px solid #f1f5f9; box-shadow: 0 4px 12px rgba(0,0,0,0.03); }
+        .stars { color: var(--accent); margin-bottom: 10px; font-size: 0.9rem; }
+        .t-card p { font-style: italic; font-size: 0.95rem; margin-bottom: 15px; }
+
         .about-split { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 60px; align-items: center; }
         .instructor-img { width: 100%; height: 500px; object-fit: cover; border-radius: 40px; border: 10px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
 
-        /* Pricing */
         .p-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         .p-card { background: white; padding: 40px 30px; border-radius: 30px; border: 1px solid #e2e8f0; text-align: center; }
         .p-card.featured { border: 4px solid var(--primary); transform: scale(1.05); }
         .p-price { font-size: 3rem; font-weight: 800; color: var(--primary); margin: 15px 0; }
 
-        /* Map */
-        .map-full { height: 450px; border-radius: 40px; overflow: hidden; border: 8px solid white; box-shadow: 0 20px 40px rgba(0,0,0,0.1); margin-top: 40px; }
-
-        /* Form */
         .form-section { background: var(--dark); color: white; padding: 100px 5%; }
-        .form-container { max-width: 800px; margin: auto; background: white; color: var(--dark); padding: 60px; border-radius: 40px; }
+        .form-container { max-width: 800px; margin: auto; background: white; color: var(--dark); padding: 50px; border-radius: 40px; }
         .input-group { margin-bottom: 20px; display: flex; flex-direction: column; gap: 8px; }
         .input-group input, .input-group select, .input-group textarea { padding: 15px; border: 2px solid #eef2f6; border-radius: 12px; font-family: inherit; }
 
-        /* Buttons */
         .btn { padding: 18px 35px; border-radius: 12px; text-decoration: none; font-weight: 700; transition: 0.3s; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; border: none; font-size: 1rem; }
         .btn-primary { background: var(--primary); color: white; }
         .btn-wa { background: var(--success); color: white; }
@@ -106,7 +97,6 @@
             .advantage-grid, .about-split { grid-template-columns: 1fr; }
             .p-card.featured { transform: scale(1); }
             .hero { padding-top: 160px; }
-            .instructor-img { height: 400px; }
             .nav-right .social-link { display: none; }
         }
     </style>
@@ -163,6 +153,47 @@
 <section class="section">
     <div class="container">
         <div class="section-header">
+            <h2 id="tHeader">Student Success Stories</h2>
+            <p id="tSub">Real feedback from students who became safe drivers with Tanvir.</p>
+        </div>
+        <div class="testimonial-grid" id="testimonialGrid">
+            <div class="t-card" data-aos="fade-up">
+                <div class="stars">★★★★★</div>
+                <p>"Tanvir is a fantastic instructor and I can recommend him without hesitation. I was very nervous when I started but his calm energy and patience helped me relax and just focus on driving."</p>
+                <strong>— Sarah</strong>
+            </div>
+            <div class="t-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stars">★★★★★</div>
+                <p>"He is teaching for road and for you to be a good, safe driver after your test, not just for passing. Confidence improved greatly. Passed first time!"</p>
+                <strong>— John D.</strong>
+            </div>
+            <div class="t-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stars">★★★★★</div>
+                <p>"Tanvir is the best instructor and very good at what he does. He does this job with passion. Choose him and you can pass at the first attempt!"</p>
+                <strong>— David</strong>
+            </div>
+            <div class="t-card" data-aos="fade-up">
+                <div class="stars">★★★★★</div>
+                <p>"Passed first attempt! His teaching style is refreshing, especially as a visual learner, using a pen and whiteboard to explain concepts clearly."</p>
+                <strong>— Michael</strong>
+            </div>
+            <div class="t-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="stars">★★★★★</div>
+                <p>"Tanvir brother is an excellent driving instructor—professional, patient, and highly knowledgeable. Highly recommended."</p>
+                <strong>— Ariful</strong>
+            </div>
+            <div class="t-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="stars">★★★★★</div>
+                <p>"Completed an intensive course. As an extremely nervous client, Tanvir helped me reduce stress. I did pass first time!"</p>
+                <strong>— Leigh</strong>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: var(--light-bg);">
+    <div class="container">
+        <div class="section-header">
             <h2 id="eHeader">Expert Training & Services</h2>
             <p id="eSubheader">Tailored coaching to help you become a confident, independent driver.</p>
         </div>
@@ -170,28 +201,28 @@
             <div class="f-card" data-aos="fade-up">
                 <span class="f-icon">🛡️</span>
                 <h3 id="t1Title">Supportive Coaching</h3>
-                <p id="t1Desc">Specialized techniques for nervous learners. I focus on building your confidence behind the wheel at a pace that suits you, ensuring a stress-free environment.</p>
+                <p id="t1Desc">Specialized techniques for nervous learners. I focus on building your confidence behind the wheel at a pace that suits you.</p>
             </div>
             <div class="f-card" data-aos="fade-up" data-aos-delay="100">
                 <span class="f-icon">🛣️</span>
                 <h3 id="t2Title">Advanced Skills</h3>
-                <p id="t2Desc">Beyond the basics: training for motorway driving, night driving, and complex roundabout navigation to ensure you are ready for real-world Edinburgh roads.</p>
+                <p id="t2Desc">Training for motorway driving, night driving, and complex roundabout navigation to ensure you are ready for Edinburgh roads.</p>
             </div>
             <div class="f-card" data-aos="fade-up" data-aos-delay="200">
                 <span class="f-icon">📚</span>
                 <h3 id="t3Title">Theory & Practical Support</h3>
-                <p id="t3Desc">I help with theory test preparation and "Show Me, Tell Me" questions, ensuring you are 100% prepared for every aspect of the DVSA exam.</p>
+                <p id="t3Desc">I help with theory test preparation and "Show Me, Tell Me" questions, ensuring you are 100% prepared for the DVSA exam.</p>
             </div>
             <div class="f-card" data-aos="fade-up" data-aos-delay="300">
                 <span class="f-icon">⏰</span>
                 <h3 id="t4Title">Flexible & Local</h3>
-                <p id="t4Desc">Offering flexible pick-up and drop-off points across Edinburgh. Whether you start from home, work, or university, I work around your schedule.</p>
+                <p id="t4Desc">Offering flexible pick-up and drop-off points across Edinburgh from home, work, or university.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section class="section" style="background: var(--light-bg);">
+<section class="section">
     <div class="container">
         <div class="about-split">
             <div data-aos="fade-right">
@@ -202,17 +233,14 @@
                 <div id="aText">
                     <p>I am a fully qualified <strong>DVSA-Approved Instructor</strong> based in Edinburgh. My mission is to deliver professional instruction that creates safe drivers for life.</p>
                     <br>
-                    <p>I stay updated with the latest DVSA standards. My <strong>Bengali heritage</strong> allows me to provide native language support for students who prefer learning in Bengali.</p>
+                    <p>My <strong>Bengali heritage</strong> allows me to provide native language support for students who prefer learning in Bengali.</p>
                 </div>
             </div>
-        </div>
-        <div class="map-full" data-aos="zoom-in">
-            <iframe src="https://maps.google.com/?cid=3912169492197853982&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQ2" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </div>
 </section>
 
-<section class="section">
+<section class="section" style="background: var(--light-bg);">
     <div class="container">
         <div class="section-header"><h2>Pricing & Packages</h2></div>
         <div class="p-grid">
@@ -271,13 +299,14 @@
         const hSub = document.getElementById('hSub');
         const btn = document.getElementById('langBtn');
         const gHeader = document.getElementById('gHeader');
-        const gSub = document.getElementById('gSub');
+        const tHeader = document.getElementById('tHeader');
+        const tSub = document.getElementById('tSub');
         const aTitle = document.getElementById('aTitle');
         const aText = document.getElementById('aText');
+        const tGrid = document.getElementById('testimonialGrid');
         
         // Expert Training IDs
         const eHeader = document.getElementById('eHeader');
-        const eSubheader = document.getElementById('eSubheader');
         const t1Title = document.getElementById('t1Title');
         const t1Desc = document.getElementById('t1Desc');
         const t2Title = document.getElementById('t2Title');
@@ -289,46 +318,61 @@
 
         if(isEng) {
             hTitle.innerText = "এডিনবার্গে পেশাদার ড্রাইভিং প্রশিক্ষণ";
-            hSub.innerText = "আমার নাম তানভীর। আমি উচ্চমানের এবং ধৈর্যশীল ড্রাইভিং প্রশিক্ষণ প্রদান করি। আজই আমাদের সফল চালকদের কমিউনিটিতে যোগ দিন।";
+            hSub.innerText = "আমার নাম তানভীর। আমি উচ্চমানের এবং ধৈর্যশীল ড্রাইভিং প্রশিক্ষণ প্রদান করি।";
             gHeader.innerText = "সফলতার দেওয়াল";
-            gSub.innerText = "আমাদের সেইসব শিক্ষার্থীদের অভিনন্দন যারা সম্প্রতি তাদের ড্রাইভিং টেস্টে পাস করেছেন!";
+            tHeader.innerText = "শিক্ষার্থীদের সাফল্যের গল্প";
+            tSub.innerText = "তানভীরের কাছে শিখে সফল হওয়া শিক্ষার্থীদের বাস্তব অভিজ্ঞতা।";
             aTitle.innerText = "তানভীর সম্পর্কে জানুন";
-            aText.innerHTML = "<p>আমি এডিনবার্গে একজন ডিভিএসএ-অনুমোদিত ইন্সট্রাক্টর। আমার লক্ষ্য হলো আপনাকে একজন নিরাপদ চালক হিসেবে গড়ে তোলা।</p><br><p>আমি বাংলা ও ইংরেজি উভয় ভাষায় প্রশিক্ষণ দিই, যাতে আপনি স্বাচ্ছন্দ্যে শিখতে পারেন।</p>";
+            aText.innerHTML = "<p>আমি এডিনবার্গে একজন ডিভিএসএ-অনুমোদিত ইন্সট্রাক্টর। আমি বাংলা ও ইংরেজি উভয় ভাষায় প্রশিক্ষণ দিই।</p>";
             
             eHeader.innerText = "অভিজ্ঞ প্রশিক্ষণ এবং সেবাসমূহ";
-            eSubheader.innerText = "আপনাকে একজন আত্মবিশ্বাসী চালক হিসেবে গড়ে তোলার জন্য বিশেষ কোচিং।";
             t1Title.innerText = "সহায়ক কোচিং";
-            t1Desc.innerText = "নার্ভাস শিক্ষার্থীদের জন্য বিশেষ পদ্ধতি। আমি আপনার সুবিধা অনুযায়ী চাপমুক্ত পরিবেশে শেখাই।";
+            t1Desc.innerText = "নার্ভাস শিক্ষার্থীদের জন্য বিশেষ পদ্ধতি। আমি আপনার সুবিধা অনুযায়ী শেখাই।";
             t2Title.innerText = "উন্নত দক্ষতা";
-            t2Desc.innerText = "মোটরওয়ে ড্রাইভিং, রাতে গাড়ি চালানো এবং জটিল রাউন্ডঅবাউট নেভিগেশনের বিশেষ প্রশিক্ষণ।";
+            t2Desc.innerText = "মোটরওয়ে ড্রাইভিং এবং জটিল রাউন্ডঅবাউট নেভিগেশনের বিশেষ প্রশিক্ষণ।";
             t3Title.innerText = "থিউরি এবং প্রাকটিক্যাল সাপোর্ট";
             t3Desc.innerText = "থিউরি টেস্ট এবং 'শো মি, টেল মি' প্রশ্নের প্রস্তুতিতে সম্পূর্ণ সাহায্য।";
             t4Title.innerText = "নমনীয় এবং স্থানীয়";
-            t4Desc.innerText = "এডিনবার্গের যেকোনো স্থান থেকে পিক-আপ এবং ড্রপ-অফ সুবিধা। আপনার সময় অনুযায়ী ক্লাস।";
+            t4Desc.innerText = "এডিনবার্গের যেকোনো স্থান থেকে পিক-আপ এবং ড্রপ-অফ সুবিধা।";
+
+            // Translate Testimonials (Simplified for example)
+            tGrid.innerHTML = `
+                <div class="t-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"তানভীর একজন চমৎকার ইন্সট্রাক্টর। আমি শুরুতে খুব নার্ভাস ছিলাম কিন্তু তার ধৈর্য আমাকে আত্মবিশ্বাসী করেছে।"</p>
+                    <strong>— সারা</strong>
+                </div>
+                <div class="t-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"তিনি শুধু পাসের জন্য নয়, নিরাপদ চালক হওয়ার জন্য শেখান। প্রথমবারেই পাস করেছি!"</p>
+                    <strong>— জন</strong>
+                </div>
+                <div class="t-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"তিনি এই কাজটি আবেগের সাথে করেন। আপনি যদি তার কথা শোনেন তবে প্রথম চেষ্টাতেই পাস করবেন।"</p>
+                    <strong>— ডেভিড</strong>
+                </div>
+                <div class="t-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"প্রথম চেষ্টায় পাস! তার শেখানোর ধরন খুব কার্যকর, বিশেষ করে ভিজ্যুয়াল লার্নারদের জন্য হোয়াইটবোর্ড ব্যবহার করেন।"</p>
+                    <strong>— মাইকেল</strong>
+                </div>
+                <div class="t-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"তানভীর ভাই একজন চমৎকার ড্রাইভিং ইন্সট্রাক্টর—পেশাদার, ধৈর্যশীল এবং অত্যন্ত জ্ঞানী।"</p>
+                    <strong>— আরিফুল</strong>
+                </div>
+                <div class="t-card">
+                    <div class="stars">★★★★★</div>
+                    <p>"ইনটেনসিভ কোর্স সম্পন্ন করেছি। তানভীর আমার মানসিক চাপ কমাতে সাহায্য করেছেন। প্রথমবারেই পাস করেছি!"</p>
+                    <strong>— লি</strong>
+                </div>
+            `;
 
             btn.innerText = "Switch to English";
             isEng = false;
         } else {
-            hTitle.innerText = "Professional Driving Instruction in Edinburgh";
-            hSub.innerText = "My name is Tanvir. I provide high-quality, patient driving lessons across Edinburgh. Join our community of successful safe drivers.";
-            gHeader.innerText = "The Wall of Fame";
-            gSub.innerText = "Congratulations to our recent students who passed their driving tests!";
-            aTitle.innerText = "Meet Tanvir";
-            aText.innerHTML = "<p>I am a fully qualified DVSA-Approved Instructor based in Edinburgh...</p>";
-            
-            eHeader.innerText = "Expert Training & Services";
-            eSubheader.innerText = "Tailored coaching to help you become a confident, independent driver.";
-            t1Title.innerText = "Supportive Coaching";
-            t1Desc.innerText = "Specialized techniques for nervous learners. I focus on building your confidence.";
-            t2Title.innerText = "Advanced Skills";
-            t2Desc.innerText = "Beyond the basics: training for motorway driving, night driving, and roundabouts.";
-            t3Title.innerText = "Theory & Practical Support";
-            t3Desc.innerText = "I help with theory test preparation and ensuring you are 100% prepared.";
-            t4Title.innerText = "Flexible & Local";
-            t4Desc.innerText = "Offering flexible pick-up and drop-off points across Edinburgh.";
-
-            btn.innerText = "বাংলা (Bengali)";
-            isEng = true;
+            location.reload(); // Quick reset to English content
         }
     }
 </script>
